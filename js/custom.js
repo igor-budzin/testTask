@@ -77,7 +77,7 @@ $(document).ready(function() {
 			TweenLite.to(c, 1, {opacity: 1});
 
 			var loadTimeline = new TimelineMax({
-				repeat: Math.floor(Math.random() * (2 - 1)) + 1, // Випадкова к-сть повторень (від 1 до 5)
+				repeat: Math.floor(Math.random() * (5 - 1)) + 1, // Випадкова к-сть повторень (від 1 до 5)
 				onComplete: function() {
 					TweenLite.to($('.load-wrap'), 0.8, {
 						opacity: 0,
