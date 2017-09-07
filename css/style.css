@@ -167,7 +167,7 @@ html, body {
 	background-color: #f16682;
 	position: absolute;
 	top: 38px;
-	left: -150px;
+	left: -120px;
 	z-index: 100;
 	opacity: 0;
 }
@@ -205,6 +205,7 @@ html, body {
 	background-color: #fdba58;
 	height: 2px;
 	opacity: 0.8;
+	min-width: 100px;
 }
 .nav-class li a {
 	text-transform: uppercase;
@@ -456,4 +457,87 @@ textarea.form-control {
 	transform: translateY(-50%);
 	left: 0;
 	right: 0;
+}
+
+@media (max-width: 1024px) {
+	.jumbotron h2 {
+		line-height: 46px;
+		font-size: 36px;
+	}
+	.social {
+		left: 0;
+		right: 0;
+		transform: none;
+		text-align: center;
+	}
+	.navbar {
+		z-index: 50;
+	}
+	.navbar-default {
+		background: none;
+		border: 0;
+	}
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+		background: none;
+	}
+	.navbar-default .navbar-toggle {
+		border: 0;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+		background-color: #fff;
+	}
+	.work-block h6 {
+		font-size: 26px;
+		margin: 0px auto 5px auto;
+	}
+	.work-block .wrap {
+		display: none;
+	}
+	.work .desc-wrap {
+		margin: 20px auto;
+	}
+	.left {
+		display: none;
+	}
+	.right {
+		left: 0;
+	}
+	.right-wrap {
+		padding: 0 20px;
+		height: auto;
+	}
+	.submit {
+		margin-top: 0;
+		font-size: 14px;
+	}
+	.submit.accept {
+		background-position: left 25% center;
+		text-align: center;
+	}
+	.in:before {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 0;
+		height: 50px;
+		left: 0;
+		z-index: 500;
+		right: 0;
+		background: rgba(0, 0, 0, 0.7);
+	}
+	.in {
+		margin-top: 50px;
+		background: rgba(0, 0, 0, 0.7);
+		transition: background 400ms ease;
+	}
+	.navbar-header {
+		z-index: 999;
+		position: absolute;
+		left: 0;
+		right: 0;
+		transition: background 400ms ease;
+	}
+	.navbar-brand {
+		margin-left: 15px;
+	}
 }

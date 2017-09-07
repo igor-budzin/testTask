@@ -61,9 +61,12 @@ $(document).ready(function() {
 						TweenLite.to($('.navbar-contact li a'), 0.5, {color: '#fff'});
 					}
 				});
-				timeLine.add('label', 0.1)
-						.to($('.left'), 0.6, {width: '50%'}, 'label')
-						.to($('.right'), 0.6, {left: '50%'}, 'label');
+
+				if(document.documentElement.clientWidth > 1024) {
+					timeLine.add('label', 0.1)
+							.to($('.left'), 0.6, {width: '50%'}, 'label')
+							.to($('.right'), 0.6, {left: '50%'}, 'label');
+				}
 			}
 		});
 	}
@@ -77,7 +80,7 @@ $(document).ready(function() {
 			TweenLite.to(c, 1, {opacity: 1});
 
 			var loadTimeline = new TimelineMax({
-				repeat: Math.floor(Math.random() * (5 - 1)) + 1, // Випадкова к-сть повторень (від 1 до 5)
+				repeat: Math.floor(Math.random() * (5 - 1)) + 1,
 				onComplete: function() {
 					TweenLite.to($('.load-wrap'), 0.8, {
 						opacity: 0,
@@ -94,10 +97,10 @@ $(document).ready(function() {
 				}
 			});
 
-			loadTimeline.to(c, 0.4, {left: 40, backgroundColor: '#fcb957', ease: Power0.easeNone})
-						.to(c, 0.4, {left: '+=150', backgroundColor: '#f16682', ease: Power0.easeNone})
-						.to(c, 0.4, {left: '-=150', backgroundColor: '#00babe', ease: Power0.easeNone})
-						.to(c, 0.4, {left: -150, backgroundColor: '#fcb957', ease: Power0.easeNone});
+			loadTimeline.to(c, 0.4, {left: 24, backgroundColor: '#fcb957', ease: Power0.easeNone})
+						.to(c, 0.4, {left: 180, backgroundColor: '#f16682', ease: Power0.easeNone})
+						.to(c, 0.4, {left: 24, backgroundColor: '#00babe', ease: Power0.easeNone})
+						.to(c, 0.4, {left: -120, backgroundColor: '#fcb957', ease: Power0.easeNone});
 
 		}
 	});
